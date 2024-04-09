@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Selamat Idul Fitri 1445 H</title>
-	<link rel="stylesheet" href="style.css">
-	<style>
+    <meta charset="UTF-8">
+    <title>Selamat Idul Fitri 1445 H</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
         @import url('https://fonts.googleapis.com/css2?family=Tangerine');
 
         * {
@@ -28,6 +28,11 @@
             justify-content: center;
             align-items: center;
             background: linear-gradient(#020238, #d4eb00);
+            overflow: hidden; /* Mengatasi overflow horizontal pada teks berjalan */
+        }
+
+        section .content {
+            z-index: 2; /* Membuat konten berada di atas latar belakang */
         }
 
         section h2 {
@@ -48,6 +53,7 @@
             top: 0;
             left: 50%;
             transform: translateX(-50%);
+            z-index: 2; /* Membuat konten berada di atas latar belakang */
         }
 
         .logo {
@@ -141,6 +147,17 @@
                 background-size: 250vw; /* Ukuran gambar diubah agar responsif */
             }
         }
+
+		.audio-player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
     </style>
 </head>
 <body>
@@ -151,23 +168,23 @@
             <div class="logo"></div>
         </div>
 
-        <div class="text">
+        <div class="content">
             <h2>َتَقَبَّلَ اللَّهُ مِنَّا وَمِنْكُمْ وَ تَقَبَّلْ ياَ كَرِيْمُ<br><span>مِنَ الْعَائِدِيْن وَالْفَائِزِيْن</span><br><u><span>NURHAM & KELUARGA</span></u>
-                <br><span><marquee >"Di tengah gema takbir,hati tertunduk untuk memohon maaf,Dari lisan yang tak terjaga,
+                <br><span><marquee>"Di tengah gema takbir,hati tertunduk untuk memohon maaf,Dari lisan yang tak terjaga,
                     Janji yang terabaikan,Tingkah laku yang tidak berkenan serta hati yang berprasangka,Izinkan Saya membuka tabirnya dengan maaf,
                     agar cahayanya menembus jiwa fitrah dari tiap khilaf,Mohon maaf lahir dan batin,Selamat Hari Raya Idul Fitri 1 Syawwal 1445 H".</marquee></span></h2>
         </div>
 
-		<div>
-    <audio controls>
-        <source src="https://soundcloud.com/nurani-celluler/gema-takbir-idul-fitri-1445h?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" type="audio/mp3">
-    </audio>
-</div>
-
         <div class="masjid">
         </div>
 
+        <div class="audio-player">
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1796770663&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        </div>
+
     </section>
+
 
 	<script src="particles.js"></script>
     
